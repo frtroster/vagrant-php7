@@ -1,0 +1,5 @@
+hostsupdater:
+    aliases:
+        - hostname.dev.sf2
+        - hostname2.dev.sf2
+        - example.org

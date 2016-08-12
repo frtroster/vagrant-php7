@@ -1,0 +1,5 @@
+projects/*
+.vagrant
+*.sublime-project
+*.sublime-workspace
+parameters.yml
