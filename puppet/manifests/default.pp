@@ -96,7 +96,7 @@ class php-setup {
         source => '/vagrant/files/php/cli/php.ini',
         require => Package[$php],
     }
-/*
+
     file { '/etc/php/7.0/fpm/php.ini':
         notify => Service["php7.0-fpm"],
         owner  => root,
@@ -106,7 +106,7 @@ class php-setup {
         source => '/vagrant/files/php/fpm/php.ini',
         require => Package[$php],
     }
-*/
+
     service { "php7.0-fpm":
         ensure => running,
         require => Package["php-fpm"],
