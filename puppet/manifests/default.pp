@@ -106,26 +106,6 @@ class php-setup {
         source => '/vagrant/files/php/fpm/php.ini',
         require => Package[$php],
     }
-
-    file { '/etc/php/7.0/fpm/php-fpm.conf':
-        notify => Service["php7.0-fpm"],
-        owner  => root,
-        group  => root,
-        ensure => file,
-        mode   => 644,
-        source => '/vagrant/files/php/fpm/php-fpm.conf',
-        require => Package[$php],
-    }
-
-    file { '/etc/php/7.0/fpm/pool.d/www.conf':
-        notify => Service["php7.0-fpm"],
-        owner  => root,
-        group  => root,
-        ensure => file,
-        mode   => 644,
-        source => '/vagrant/files/php/fpm/pool.d/www.conf',
-        require => Package[$php],
-    }
 */
     service { "php7.0-fpm":
         ensure => running,
